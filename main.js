@@ -17,7 +17,7 @@ scene.add(directionalLight);
 
 // Different materials
 const materials = [
-    new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 1.8, roughness: 0.2 }),
+    new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: .8, roughness: 0.2 }),
     new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 0.5, roughness: 0.5 }),
     new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 0.1, roughness: 0.1 }),
     new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 0.2, roughness: 0.8 }),
@@ -31,7 +31,7 @@ const geometries = [
     new THREE.SphereGeometry(1.5, 12, 92),
     new THREE.ConeGeometry(1.5, 1, 92),
     new THREE.TorusGeometry(5, 0.01,16, 200),
-    new THREE.DodecahedronGeometry(1.7)
+    new THREE.DodecahedronGeometry(1.7) 
 ];
 
 for (let i = 0; i < 40; i++) {
@@ -52,7 +52,7 @@ camera.position.z = 10;
 
 function animate() {
     shapes.forEach(shape => {
-        shape.rotation.x += 0.001;
+        shape.rotation.x += 0.01;
         shape.rotation.y += 0.0001;
     });
     renderer.render(scene, camera);
