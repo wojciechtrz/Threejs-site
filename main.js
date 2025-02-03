@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@latest/build/three.module.js';
 
 const scene = new THREE.Scene();
 scene.background = null; // Set background to transparent
